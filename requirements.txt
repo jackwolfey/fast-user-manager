@@ -1,0 +1,7 @@
+cryptography==42.0.5
+apscheduler
+attrs
+filelock
+funfunc
+fastapi
+uvicorn
