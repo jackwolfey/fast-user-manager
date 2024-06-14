@@ -1,4 +1,4 @@
-# fast_user_manager
+# fast-user-manager
 
 ### a basic but useful user management service with fastapi
 
