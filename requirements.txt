@@ -5,3 +5,4 @@ filelock
 funfunc
 fastapi
 uvicorn
+pywebio
