@@ -20,7 +20,6 @@ from attr import define, field, fields_dict, Factory
 from cryptography.fernet import Fernet
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.staticfiles import StaticFiles
 from filelock import FileLock
 from funfunc import get_basic_logger
 from pydantic import BaseModel
@@ -452,8 +451,7 @@ class IsAllowedResponse(RegisterResponse):
     allowed: bool
 
 
-app_udb.mount("/webio_static", StaticFiles(directory='./webio_static'), name='static')
-app_udb.mount("/control_panel", FastAPI(routes=webio_routes(internal_control_panel, cdn="/webio_static")))
+app_udb.mount("/control_panel", FastAPI(routes=webio_routes(internal_control_panel)))
 
 
 @app_udb.post('/register', response_model=RegisterResponse)
