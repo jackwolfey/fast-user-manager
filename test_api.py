@@ -8,12 +8,12 @@ ENDPOINT = 'http://localhost:8090'
 
 
 def test_add_user():
-    r = requests.post(ENDPOINT + '/regist', json={'username': 'add', 'password': '12345'}, timeout=10)
+    r = requests.post(ENDPOINT + '/register', json={'username': 'abcthejohn', 'password': 'ABCabc?123'})
     print(r.text)
 
 
 def test_login():
-    r = requests.post(ENDPOINT + '/login', json={'username': 'abcthejohn', 'password': '12345'}, timeout=10)
+    r = requests.post(ENDPOINT + '/login', json={'username': 'abcthejohn', 'password': 'ABCabc?123'})
     print(r.text)
 
 
